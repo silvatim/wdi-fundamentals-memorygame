@@ -4,7 +4,7 @@ var cardTwo = cardOne;
 var cardThree = "king";
 var cardFour = cardThree;
 
-if (cardTwo == cardFour){
+if (cardTwo === cardFour){
  alert("You found a match!");
 }
 else{
