@@ -11,7 +11,7 @@ p{
   text-align:center;
 }
 #instructions{
-  
+
 }
 
 #board {
@@ -20,7 +20,7 @@ p{
   display: inline-block;
   float:left;
   margin:8%
-  
+
 }
 .card {
   height: 200px;
@@ -30,7 +30,7 @@ p{
   border: 1px solid #000000;
   float:left;
   margin:8%;
-  
+
 }
 .name{
   color: #ff0000;
