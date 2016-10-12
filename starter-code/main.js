@@ -1,6 +1,7 @@
 console.log("JS file is connected to HTML! Woo!")
 
 var cardsInPlay =[];
+var score = 0;
 
 function createCards(){
   var cards = ['queen','queen','king','king'];
@@ -25,7 +26,7 @@ function flipCard(){
    };
 
   cardsInPlay.push(cardType);
-  checkTwoCards();
+  checkNumCards();
 }
 
 function checkNumCards(){
@@ -36,11 +37,15 @@ function checkNumCards(){
  }
 
 function isMatch(selectedCards){
+  var points = document.getElementById('points');
+
   if(selectedCards[0] === selectedCards[1]){
-    setTimeout(function(){ alert("You found a match!"); }, 500);
+    setTimeout(function(){ alert("You found a match 100 points!"); }, 500);
+    score += 100;
   }else{
     setTimeout(function(){ alert("Sorry, try again"); }, 500);
   };
+  points.innerHTML = score;
   setTimeout(function(){ resetBoard(); }, 500);
 }
 
@@ -50,6 +55,8 @@ function resetBoard(){
       allCards[i].innerHTML = "";
    };
 }
+
+
 createCards();
 
 
